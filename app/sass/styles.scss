@@ -1,0 +1,20 @@
+$mainColor:#6ba2aa;
+$darkMain:#25616a;
+$lightGrey:#b3c1c5;
+
+.comment-box{
+    background-color: $mainColor;
+    width: 50%;
+    float: left;
+    padding:20px;
+    .btn{
+        background-color: $darkMain;
+        color:#fff;
+        outline: 0!important;
+    }
+    .comment-list{
+        background-color: $lightGrey;
+        padding-left:20px;
+    }
+}
+

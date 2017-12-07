@@ -1,0 +1,39 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "first-react-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaaljan/react-app.git"
+  },
+  "author": "Heinrich Coetzee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vaaljan/react-app/issues"
+  },
+  "homepage": "https://github.com/Vaaljan/react-app#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-css-scss": "*",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "serve": "^6.4.1",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0"
+  }
+}
