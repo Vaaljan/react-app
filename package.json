@@ -32,6 +32,8 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass-external-variables": "0.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0"

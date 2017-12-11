@@ -1,20 +1,387 @@
-$mainColor:#6ba2aa;
-$darkMain:#25616a;
-$lightGrey:#b3c1c5;
 
-.comment-box{
-    background-color: $mainColor;
-    width: 50%;
-    float: left;
-    padding:20px;
-    .btn{
-        background-color: $darkMain;
-        color:#fff;
-        outline: 0!important;
-    }
-    .comment-list{
-        background-color: $lightGrey;
-        padding-left:20px;
-    }
+$mint : #ca9893;
+$clay : #b3a193;
+$brown : #423d3a;
+$lightMint : #d9b9b5;
+$lightClay : #d4cbc4;
+$grey : #7d7d7d;
+$lightGrey : #b5b5b5;
+$veryLightGrey : #E2E2E2;
+$darkGrey: #585858;
+
+
+
+/*----------------fonts etc------------------
+----------------------------------------------------*/
+
+@font-face {
+    font-family: LibreBaskerville-Bold;
+    src: url('fonts/LibreBaskerville-Bold.ttf') format("truetype");
+  
+  }
+  @font-face {
+    font-family: LibreBaskerville-Regular;
+    src: url('fonts/LibreBaskerville-Regular.ttf') format("truetype");
+  
+  }
+  @font-face {
+    font-family: LibreBaskerville-Italic;
+    src: url('fonts/LibreBaskerville-Italic.ttf') format("truetype");
+  
+  }
+  
+  
+  h1{
+      color:$clay;
+      font-size:20px;
+  }
+  h2{
+      color:$clay;
+      font-size:18px;
+  }
+  h3{
+      color:$clay;
+      font-size:16px;
+  }
+
+/*----------------Navigation and Header css------------------
+-----------------------------------------------------------*/
+
+.logo{
+	text-align:center;
+	margin:0 auto 20px auto;
+	padding-bottom:15px;
+	border-bottom:1px solid $lightClay;
 }
+
+
+
+/*----------------Navigation CSS---------------
+-------------------------------------------*/
+#mainNavigation{
+	margin-top: 15px;
+	background-color:#fff;
+}
+.navbar-default .navbar-nav > li.active:after{
+				content:"";
+				display:block;
+				width: 30px;
+				position: absolute;
+				top:0;
+				left: 0;
+				right:0;
+				margin-left: auto;
+				margin-right: auto;
+				 border-bottom:2px solid $mint;
+}
+.navbar{
+	
+}
+.navbar-default{
+margin:0 auto;
+  	border: 0px solid transparent !important;
+  	z-index: 1!important;
+}
+.navbar-collapse ,#bs-example-navbar-collapse-1{
+	z-index: 1!important;
+	width: 100%;
+}
+.navbar-default .navbar-nav > li > a{
+	color:#000;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	padding-top:12px;
+	z-index: 1!important;
+	min-width: 120px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	  background-color: #fff;
+	  color:#808080;
+	  z-index: 1!important;
+
+}
+
+.navbar-default .navbar-nav > li.active {
+  	  background-color: #fff;
+  	border-bottom:2px solid $mint;
+}
+
+.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	  background-color: #fff;
+	 color:#000;
+
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-left: 0;
+}
+
+/*Navbar Mobile Toggle*/
+.navbar-default .navbar-toggle {
+  background-color: $clay;
+  color:#fff;
+  font-size: 12px;
+  margin:0;
+  padding-bottom: 2px;
+  text-align: center;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color: $lightClay;
+	color:$brown;
+}
+.navbar-default .navbar-toggle:hover > .icon-bar {
+background-color: $brown;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff; 
+ 	color:#fff;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+
+}
+.navbar-toggle{
+
+
+}
+.navbar-default .navbar-toggle{
+	border-bottom-color: transparent;
+}
+
+/*----------------Navigation END CSS---------------
+-------------------------------------------*/
+
+body{
+	font-family:LibreBaskerville-Regular;
+}
+
+#cartNav{
+	display:none;
+}
+
+/*----------------Shop Page CSS------------------
+----------------------------------------------------*/
+.shopContainer{
+h1{
+	margin-top:10px;
+	text-align:left;
+	margin-bottom:20px;
+	border-bottom:1px solid $clay;;
+	}
+a{
+	color:$grey;
+	text-decoration:none;
+}
+.shopImage{
+	padding:3px 20px 5px 20px;
+	-webkit-transition: padding 0.5s; /* Safari */
+  transition: padding 0.5s;
+}
+
+.shopImage img{
+opacity:0.8;
+	  -webkit-transition: opacity 0.5s; /* Safari */
+  transition: opacity 0.5s;
+}
+
+.shopImage:hover img{
+opacity:1.0;
+}
+.shopImage:hover{
+	padding:3px 10px 5px 10px;
+}
+.shopdesc{
+	p{
+		text-align:center;
+	}
+}
+.shopItem{
+	cursor:pointer;
+}
+.shopItem{
+	
+}
+
+}
+.btn{
+	min-width:150px;
+	padding:10px;
+	background-color:$mint;
+	color:#fff;
+	border:1px solid #e6e6e6;
+	outline:none;
+	cursor:pointer;
+}
+input{
+	margin:10px 0 10px 0;
+	outline:none;
+}
+.simple-form{
+	margin-top:10px;
+}
+
+button.addToCart{
+	min-width:150px;
+	padding:10px;
+	background-color:$mint;
+	color:#fff;
+	border:1px solid #e6e6e6;
+	outline:none;
+	cursor:pointer;
+}
+.viewCartBanner{
+	display:none;
+}
+
+.love{
+	display:inline-block;
+	height:20px;
+	width:20px;
+	background-image:url("img/socialSpriteWhite.png");
+	background-size:81px 20px;
+	background-position:3px 4px;
+	background-repeat:no-repeat;
+
+}
+/*----------------Shop Page CSS------------------
+----------------------------------------------------*/
+.howToContainer{
+	margin-top:-20px;
+	h1{
+	margin-top:10px;
+	text-align:left;
+	margin-bottom:10px;
+	border-bottom:1px solid $clay;;
+	}
+	.howToContent{
+		margin: 0 auto;
+	}
+	.howToIcon{
+	text-align:center;
+	margin:0 auto;
+	}
+	.howToItem{
+	margin-top:100px
+	}
+}
+
+
+
+
+
+
+.footer{
+	margin-top:30px;
+	border-top:2px solid $lightClay;
+	padding-top:30px;
+	padding-bottom:30px;
+	a{
+		color:$lightGrey;
+		text-decoration:none;
+	}
+	a:hover{
+		color:$clay;
+	}
+
+}
+.bottomBanner{
+	margin:0 auto;
+	text-align:center;
+	height:30px;
+	color:#fff;
+	background-color:$clay;
+}
+.viewCartText{
+	margin-top:20px;
+	color:$grey;
+}
+.viewCartBannerContent{
+	height:60px;
+	background-color:#e6e6e6;
+	margin-bottom:20px;
+}
+.viewCartBtn{
+	margin:0 auto;
+	text-align:center;
+}
+.viewCartBtn button{
+	margin:10px auto 0 auto;
+	min-width:150px;
+	padding:10px;
+	background-color:$mint;
+	color:#fff;
+	border:1px solid #fff;
+	outline:none;
+	cursor:pointer;
+}
+button.checkoutBtn{
+	margin:10px auto 0 auto;
+	min-width:150px;
+	padding:10px;
+	background-color:$mint;
+	color:#fff;
+	border:1px solid #fff;
+	outline:none;
+	cursor:pointer;
+}
+button.closeBtn{
+	margin:10px auto 0 auto;
+	padding:10px;
+	background-color:$mint;
+	color:#fff;
+	border:1px solid #fff;
+	outline:none;
+	cursor:pointer;
+}
+
+.imageContainer{
+	width:100%;
+}
+.imageWrapper {
+  display: block;
+  width:100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s; }
+
+.thumbnailWrapper {
+  display: inline-block;
+  width: 350px;
+  text-align: center; }
+
+.thumbnail {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  background-color: #efefef;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  vertical-align: top;
+  opacity: 0.6;
+  transition: all 0.3s; }
+  .thumbnail:hover {
+    opacity: 0.9; }
+
+.active {
+  opacity: 1; }
+
+@media screen and (max-width: 500px) {
+  .imageWrapper {
+    width: 100%; }
+
+  .thumbnailWrapper {
+    width: 100%; }
+
+  .container {
+    margin: 10px; } }
+
 

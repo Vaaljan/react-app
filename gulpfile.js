@@ -92,7 +92,7 @@ function bundleApp(isProduction) {
 			.bundle()
 			.on('error', gutil.log)
 			.pipe(source('vendors.js'))
-			.pipe(gulp.dest('./web/js/'));
+			.pipe(gulp.dest('./js/'));
   	}
   	if (!isProduction){
   		// make the dependencies external so they dont get bundled by the 
@@ -109,5 +109,5 @@ function bundleApp(isProduction) {
 	    .bundle()
 	    .on('error',gutil.log)
 	    .pipe(source('bundle.js'))
-	    .pipe(gulp.dest('./web/js/'));
+	    .pipe(gulp.dest('./js/'));
 }
