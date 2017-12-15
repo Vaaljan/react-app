@@ -285,8 +285,10 @@ button.addToCart{
 	}
 	a:hover{
 		color:$clay;
-	}
-
+	}	
+}
+.displayInline{
+display: inline-block;
 }
 .bottomBanner{
 	margin:0 auto;

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Main extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <div className="container">
                     <div className="row">
@@ -34,16 +34,47 @@ class Main extends Component {
                     </div>
                     <div className="row">
                         <div className="logo col-md-12">
-                            {/* <img src="/img/logo.png" width="50%" /> */}
+                            <img src="/img/logo.png" width="50%" />
                         </div>
                     </div>
                 </div>
-                    <div className="container">
-                        {this.props.children}
-                    </div>
+                {/* Content */}
+                <div className="container">
+                    {this.props.children}
                 </div>
+
+                <FooterContent />
+
+                {/* Wrapping Div End  => */}</div>
         );
     }
+}
+
+function FooterContent() {
+    return (
+        <div>
+        <div className="container">
+            <div className="footer">
+                <div className="col-md-2">
+                    <a>Terms of Use</a>
+                </div>
+                <div className="col-md-2">
+                    <a>Privacy Policy</a>
+                </div>
+                <div className="col-md-8">
+                    <a href="/contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div className="container-fluid">
+            <div className="row">
+                <div className="bottomBanner">
+                    <div className="displayInline">Designed with <div className="love"></div></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    )
 }
 
 export default Main

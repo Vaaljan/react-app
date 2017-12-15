@@ -218,6 +218,9 @@ button.addToCart {
   .footer a:hover {
     color: #b3a193; }
 
+.displayInline {
+  display: inline-block; }
+
 .bottomBanner {
   margin: 0 auto;
   text-align: center;
