@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
-    render(){
-        return (<h1>Contact Page</h1>);
+    render() {
+        return (
+            <div className="contactContainer">
+                <h1>Contact</h1>
+                <p>hello@hallo.com</p>
+                <p>071 612 1640</p>
+            </div>
+        );
     }
 }
 

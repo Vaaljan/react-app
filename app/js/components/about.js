@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-    render(){
-        return (<h1>About Page</h1>);
+    render() {
+        return (
+            <div className="aboutContainer">
+                <h1>About</h1>
+                <p>Carla is the master mind behind this idea!</p>
+            </div>
+        );
     }
 }
 
