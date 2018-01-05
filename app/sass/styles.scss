@@ -166,6 +166,7 @@ body{
 /*----------------Shop Page CSS------------------
 ----------------------------------------------------*/
 .shopContainer{
+	margin-bottom:30px;
 h1{
 	margin-top:10px;
 	text-align:left;
@@ -179,8 +180,9 @@ a{
 .shopImage{
 	padding:3px 20px 5px 20px;
 	-webkit-transition: padding 0.5s; /* Safari */
-  transition: padding 0.5s;
+  	transition: padding 0.5s;
 }
+
 
 .shopImage img{
 opacity:0.8;
@@ -390,6 +392,7 @@ button.closeBtn{
     width: 100%; }
 
   .container {
-    margin: 10px; } }
+	margin: 10px; } 
+}
 
 

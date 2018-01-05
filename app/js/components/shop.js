@@ -1,65 +1,65 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { gateway as MoltinGateway } from '@moltin/sdk';
 
-
-const Moltin = MoltinGateway({
-    client_id: 'qKRonmK7IZATt9cgEUAcoC5G6QUC4JZuskieyAWkLJ'
-});
-let productData = {}
-const products = Moltin.Products.With("main_image").All().then((products) => {
-    productData = products;
-});
-
-let categoryData = {};
-const categories = Moltin.Categories.With('products').All().then((categories) => {
-    categoryData = categories;
-});
 
 
 
 class Shop extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
             <div>
-                <Categories />
+                <Categories categoryData={this.props.categoryData} productData={this.props.productData}/>
             </div>
         )
     }
 }
 
 class Categories extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
-        const catData = categoryData.data.map((item) => {
+        const catData = this.props.categoryData.data.map((item) => {
             return (
                 <div key={item.id}>
                     <h1>{item.name}</h1>
-                    <Products productData={item.relationships.products.data} />
+                    <ProductList productData={item.relationships.products.data} products={this.props.productData}/>
                 </div>
             )
         });
 
             return (
-                <div className="categories">
+                <div className="categories" id="categories">
                     {catData}
                 </div>
             )
     }
 }
 
-class Products extends Component {
+class ProductList extends Component {
     constructor(props) {
         super(props)
+        // this.state = this.props.state;
     }
+    // componentWillReceiveProps(){
+    //     this.setState({hideCategories:false});
+    // }
+    // setDisplay(){
+    //     this.setState({hideCategories:true});
+    //     console.log(this.state)
+    // }
     render() {
-        const productArray = this._getProductData(this.props.productData);
+        const productArray = this._getProductData(this.props.productData,this.props.products);
         const productList = productArray.map((item) => {
             return (
                 <div className="col-md-4" key={item.id}>
-                    <NavLink to={"/shop/" + item.id} className="list-group-item" >
+                    <NavLink to={"/products/" + item.id} className="list-group-item">
                         <div className="shopItem">
                             <div className="shopImage">
-                                <ProductImages images={item} />
+                                <ProductImages images={item} productData={this.props.products}/>
                             </div>
                             <div className="shopdesc">
                                 <p>{item.name}</p>
@@ -85,12 +85,13 @@ class Products extends Component {
             </div>
         );
     }
+  
 
-    _getProductData(categoryArray){
+    _getProductData(categoryArray,products){
         const array = [];
         for(let i=0;i<categoryArray.length;i++){
             const catId = categoryArray[i].id;
-            const findProducts = productData.data.find((arr)=>{
+            const findProducts = products.data.find((arr)=>{
                 if(arr.id == catId){
                     array.push(arr);
                 }
@@ -108,7 +109,7 @@ class ProductImages extends Component {
     }
     render() {
         const imageId = this.props.images.relationships.main_image.data.id;
-        const getImage = productData.included.main_images.find((arr) => {
+        const getImage = this.props.productData.included.main_images.find((arr) => {
             if (arr.id == imageId) {
                 return arr;
             }

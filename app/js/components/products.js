@@ -1,37 +1,40 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 
-class Products extends Component {
+class ProductItem extends Component {
     handleRedirect(){
-        this.props.routeProps.history.push("/shop")
+        this.props.routeProps.history.push('/shop')
     }
+
+    
     render(){
-        const products = this.props.productData;
+        const products = this.props.categoryData.included.products;
         const id = this.props.routeProps.match.params.id;
         const item = products.filter(item => {
             if(item.id == id) {
                 return item;
             }
         });
+        const productItem = item[0];
         return(
             <div>
-                <h1>{item[0].name}</h1>
+                <h1>{productItem.name}</h1>
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
                         <div className="thumbnail">
-                            <img src={item[0].media} alt={item[0].name} />
+                            {/* <img src={productItem.media} alt={productItem.name} /> */}
                         </div>
                     </div>
                     <div className="col-sm-6 col-md-4">
                        <ul>
-                           <li><strong>Model</strong>: {item[0].model}</li>
-                           <li><strong>Make</strong>: {item[0].make}</li>
-                           <li><strong>Year</strong>: {item[0].year}</li>
-                           <li><strong>Price</strong>: {item[0].price}</li>
+                           <li><strong>Product Name</strong>: {productItem.name}</li>
+                           <li><strong>Product Description</strong>: {productItem.description}</li>
+                           <li><strong>Price</strong>: {productItem.price[0].amount}</li>
+
                        </ul>
                     </div>
                     <div className="col-md-12">
-                    <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Go to Cars</button>
+                        <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Show All Products</button>
                     </div>
                 </div>
             </div>
@@ -39,4 +42,4 @@ class Products extends Component {
     }
 }
 
-export default Products
+export default ProductItem
