@@ -304,6 +304,10 @@ button.closeBtn {
 .thumbnail:hover {
   opacity: 0.9; }
 
+.showAllProducts {
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
 .active {
   opacity: 1; }
 

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 class ProductItem extends Component {
+    constructor(props){
+        super(props)
+    }
     handleRedirect(){
         this.props.routeProps.history.push('/shop')
     }
-
-    
     render(){
-        const products = this.props.categoryData.included.products;
+        const products = this.props.productData.data;
         const id = this.props.routeProps.match.params.id;
         const item = products.filter(item => {
             if(item.id == id) {
@@ -21,9 +22,7 @@ class ProductItem extends Component {
                 <h1>{productItem.name}</h1>
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
-                        <div className="thumbnail">
-                            {/* <img src={productItem.media} alt={productItem.name} /> */}
-                        </div>
+                            <ProductImages imageID={productItem.relationships.main_image.data.id} productData={this.props.productData}/>
                     </div>
                     <div className="col-sm-6 col-md-4">
                        <ul>
@@ -33,12 +32,33 @@ class ProductItem extends Component {
 
                        </ul>
                     </div>
+
                     <div className="col-md-12">
-                        <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Show All Products</button>
+                        <button className="btn btn-default showAllProducts" onClick={this.handleRedirect.bind(this)}>Show All Products</button>
                     </div>
                 </div>
             </div>
         );
+    }
+}
+
+class ProductImages extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        const imageID = this.props.imageID;
+        const allProductImages = this.props.productData.included.main_images;
+        const getImage = allProductImages.find((arr) => {
+            if (arr.id == imageID) {
+                return arr;
+            }
+        });
+        return (
+            <div>
+                 <img src={getImage.link.href} alt="Product Image" width="80%"/> 
+            </div>
+        )
     }
 }
 
