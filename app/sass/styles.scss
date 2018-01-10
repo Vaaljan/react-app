@@ -1,14 +1,13 @@
 
-$mint : #ca9893;
+$pink : #ca9893;
 $clay : #b3a193;
 $brown : #423d3a;
-$lightMint : #d9b9b5;
+$lightPink : #d9b9b5;
 $lightClay : #d4cbc4;
 $grey : #7d7d7d;
 $lightGrey : #b5b5b5;
 $veryLightGrey : #E2E2E2;
 $darkGrey: #585858;
-
 
 
 /*----------------fonts etc------------------
@@ -72,7 +71,7 @@ $darkGrey: #585858;
 				right:0;
 				margin-left: auto;
 				margin-right: auto;
-				 border-bottom:2px solid $mint;
+				 border-bottom:2px solid $pink;
 }
 .navbar{
 	
@@ -105,7 +104,7 @@ margin:0 auto;
 
 .navbar-default .navbar-nav > li.active {
   	  background-color: #fff;
-  	border-bottom:2px solid $mint;
+  	border-bottom:2px solid $pink;
 }
 
 .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
@@ -219,11 +218,15 @@ opacity:1.0;
 .btn{
 	min-width:150px;
 	padding:10px;
-	background-color:$mint;
+	background-color:$pink;
 	color:#fff;
 	border:1px solid #e6e6e6;
 	outline:none;
 	cursor:pointer;
+}
+.btn:hover{
+	background-color: $lightPink;
+	color: #fff;
 }
 input{
 	margin:10px 0 10px 0;
@@ -236,7 +239,7 @@ input{
 button.addToCart{
 	min-width:150px;
 	padding:10px;
-	background-color:$mint;
+	background-color:$pink;
 	color:#fff;
 	border:1px solid #e6e6e6;
 	outline:none;
@@ -322,7 +325,7 @@ display: inline-block;
 	margin:10px auto 0 auto;
 	min-width:150px;
 	padding:10px;
-	background-color:$mint;
+	background-color:$pink;
 	color:#fff;
 	border:1px solid #fff;
 	outline:none;
@@ -332,7 +335,7 @@ button.checkoutBtn{
 	margin:10px auto 0 auto;
 	min-width:150px;
 	padding:10px;
-	background-color:$mint;
+	background-color:$pink;
 	color:#fff;
 	border:1px solid #fff;
 	outline:none;
@@ -341,7 +344,7 @@ button.checkoutBtn{
 button.closeBtn{
 	margin:10px auto 0 auto;
 	padding:10px;
-	background-color:$mint;
+	background-color:$pink;
 	color:#fff;
 	border:1px solid #fff;
 	outline:none;
@@ -399,3 +402,40 @@ button.closeBtn{
 }
 
 
+// Login Page
+.loginContainer{
+
+.spacer{
+	margin: 0 auto;
+	width: 5px;
+	height: 100%;
+	border-left:1px solid $grey;
+}
+.horizontalSpacer{
+	border-bottom: 1px solid $grey;
+	margin:10px 0;	
+}
+h2{
+	padding-bottom: 10px;
+	border-bottom:2px solid $clay;
+}
+h5{
+	margin: 20px 0 0 0;
+	color: $grey;
+}
+// input{
+// 	width: 90%;
+// 	border-radius: 10px;
+// 	outline: 0;
+// 	border:2px solid $clay;
+// 	padding:10px 15px;
+// 	font-size: 10px;
+// 	color: $veryLightGrey;
+// }
+button{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+}

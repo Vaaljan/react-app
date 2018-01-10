@@ -14,6 +14,7 @@ import {
 import Main from './components/main.js';
 import Home from './components/home.js';
 import About from './components/about.js';
+import Login from './components/login.js';
 import Shop from './components/shop.js';
 import ProductItem from './components/products.js';
 import Contact from './components/contact.js';
@@ -42,7 +43,7 @@ render(
         <Route path="/about" component={About}/>
         <Route path="/products/:id" render={(props)=> <ProductItem productData={productData} categoryData={categoryData} routeProps={props}/>}/>
         <Route path="/shop" render={(props)=> <Shop routeOptions={props} productData={productData} categoryData={categoryData}/>}/>
-        
+        <Route path="/login" render={(props)=> <Login routeOptions={props} productData={productData} categoryData={categoryData}/>}/>
         <Route path="/contact" component={Contact}/>
         </Main>
         </div>

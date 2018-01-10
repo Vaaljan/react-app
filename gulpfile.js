@@ -71,6 +71,7 @@ function bundleApp(isProduction) {
 		'./app/js/app.js',
 		'./app/js/components/main.js',
 		'./app/js/components/home.js',
+		'./app/js/components/login.js',
 		'./app/js/components/about.js',
 		'./app/js/components/contact.js',
 		'./app/js/components/shop.js',

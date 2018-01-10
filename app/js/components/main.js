@@ -22,6 +22,7 @@ class Main extends Component {
                                         <li><NavLink to="/shop" activeClassName="active">Shop</NavLink></li>
                                         <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
                                         <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>
+                                        <li><NavLink to="/login" activeClassName="active">Login</NavLink></li>
                                     </ul>
                                 </div>
                             </nav>

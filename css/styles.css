@@ -162,6 +162,10 @@ body {
   outline: none;
   cursor: pointer; }
 
+.btn:hover {
+  background-color: #d9b9b5;
+  color: #fff; }
+
 input {
   margin: 10px 0 10px 0;
   outline: none; }
@@ -318,3 +322,26 @@ button.closeBtn {
     width: 100%; }
   .container {
     margin: 10px; } }
+
+.loginContainer .spacer {
+  margin: 0 auto;
+  width: 5px;
+  height: 100%;
+  border-left: 1px solid #7d7d7d; }
+
+.loginContainer .horizontalSpacer {
+  border-bottom: 1px solid #7d7d7d;
+  margin: 10px 0; }
+
+.loginContainer h2 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #b3a193; }
+
+.loginContainer h5 {
+  margin: 20px 0 0 0;
+  color: #7d7d7d; }
+
+.loginContainer button {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto; }
